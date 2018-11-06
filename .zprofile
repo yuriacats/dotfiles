@@ -12,3 +12,4 @@ export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export TMUX_TMPDIR=/tmp
