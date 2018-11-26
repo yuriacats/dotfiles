@@ -1,6 +1,6 @@
 # dotfiles
 
-##使い方
+## 使い方
 ```
 chomod 764 dotfileLink.sh
 ./dotfileLink.sh
@@ -10,6 +10,6 @@ chomod 764 dotfileLink.sh
 
 現状だとVimの設定、zshの設定などが書かれているよ。
 
-##　Todo
+## Todo
 Zshを豪華にする。色付けいい感じにしたい。
 Tmuxもいい感じにする。すでにいい感じかもしれないけど…
