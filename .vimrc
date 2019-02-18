@@ -30,8 +30,12 @@ call plug#begin('~/.vim/plugged')
 "書き方"
 " Plug 'プラグイン名' "
 Plug 'othree/yajs.vim'            " es6のハイライト"
+Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'                " jsxのハイライト"
+Plug 'mattn/emmet-vim'  
+Plug 'hail2u/vim-css3-syntax'     
 Plug 'udalov/kotlin-vim'
 Plug 'scrooloose/nerdtree'        "vimの:eコマンド押したときのツリー"
-Plug 'mattn/emmet-vim'
+Plug 'dpelle/vim-LanguageTool'
 call plug#end()
+

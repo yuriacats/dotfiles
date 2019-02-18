@@ -13,3 +13,4 @@ eval "$(goenv init -)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export TMUX_TMPDIR=/tmp
+alias chrm="open -a Google\ Chrome --args -allow-file-access-from-files "

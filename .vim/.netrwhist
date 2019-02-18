@@ -1,9 +1,9 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/tsuchitahika/makes/info2_final/app'
-let g:netrw_dirhist_2='/Users/tsuchitahika/makes/info2_final/app/scripts'
-let g:netrw_dirhist_3='/Users/tsuchitahika/makes/info2_final/app/bower_components'
-let g:netrw_dirhist_4='/Users/tsuchitahika/makes/info2_final/app/bower_components/jquery'
-let g:netrw_dirhist_5='/Users/tsuchitahika/makes/info2_final/app/bower_components/jquery/dist'
-let g:netrw_dirhist_6='/Users/tsuchitahika/makes/info2_final/app'
-let g:netrw_dirhist_7='/Users/tsuchitahika/makes/info2_final/app/bower_components'
+let g:netrw_dirhist_1='/Users/tsuchitahika/project/rainy/components'
+let g:netrw_dirhist_2='/Users/tsuchitahika/project/rainy/scss'
+let g:netrw_dirhist_3='/Users/tsuchitahika'
+let g:netrw_dirhist_4='/Users/tsuchitahika/Downloads'
+let g:netrw_dirhist_5='/Users/tsuchitahika/Downloads/rainy-dev-help'
+let g:netrw_dirhist_6='/Users/tsuchitahika/project/rainy/scss'
+let g:netrw_dirhist_7='/Users/tsuchitahika/project/rainy-master'
