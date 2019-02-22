@@ -14,3 +14,5 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export TMUX_TMPDIR=/tmp
 alias chrm="open -a Google\ Chrome --args -allow-file-access-from-files "
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

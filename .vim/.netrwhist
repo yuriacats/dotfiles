@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/tsuchitahika/project/rainy/components'
-let g:netrw_dirhist_2='/Users/tsuchitahika/project/rainy/scss'
-let g:netrw_dirhist_3='/Users/tsuchitahika'
-let g:netrw_dirhist_4='/Users/tsuchitahika/Downloads'
-let g:netrw_dirhist_5='/Users/tsuchitahika/Downloads/rainy-dev-help'
-let g:netrw_dirhist_6='/Users/tsuchitahika/project/rainy/scss'
-let g:netrw_dirhist_7='/Users/tsuchitahika/project/rainy-master'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/tsuchitahika/leon_okra/.core/view/src/lib/admin/components/routes/categories'
