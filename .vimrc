@@ -17,6 +17,7 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 "念願のタグジャンプだぞ！
 set showmatch " 括弧の対応関係を一瞬表示する
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
+let mapleader = "\<Space>"
 " コピペのときだけ例のあれ
 if &term =~ "xterm"
     let &t_SI .= "\e[?2004h"
@@ -50,6 +51,7 @@ inoremap <C-j> <ESC>
 " vimのタブ移動"
 nnoremap sn gT
 nnoremap sm gt
+autocmd BufNewFile,BufRead \*.{md,mdwn,mkd,mkdn,mark\*} set filetype=markdown
 "vim プラグイン導入"
 call plug#begin('~/.vim/plugged')
 "書き方"
@@ -66,5 +68,11 @@ Plug 'udalov/kotlin-vim'
 Plug 'scrooloose/nerdtree'        "vimの:eコマンド押したときのツリー"
 Plug 'dpelle/vim-LanguageTool'
 Plug 'leafgarland/typescript-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'previm/previm'
+Plug 'tfnico/vim-gradle'
+Plug 'tyru/open-browser.vim'
 call plug#end()
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+au BufRead,BufNewFile *.md set filetype=markdown
 
