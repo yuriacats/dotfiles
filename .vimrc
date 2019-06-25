@@ -1,6 +1,7 @@
 "XMLするフレームワーク系のシンタックスの拡張"
 au BufRead,BufNewFile *.vue set filetype=html
 " 行番号を表示"
+colorscheme molokai
 set number 
 set cursorline
 set expandtab
@@ -75,4 +76,5 @@ Plug 'tyru/open-browser.vim'
 call plug#end()
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 au BufRead,BufNewFile *.md set filetype=markdown
+autocmd VimEnter * execute 'NERDTree'
 
