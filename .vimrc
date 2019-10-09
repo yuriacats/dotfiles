@@ -19,19 +19,6 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 set showmatch " 括弧の対応関係を一瞬表示する
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
 let mapleader = "\<Space>"
-" コピペのときだけ例のあれ
-if &term =~ "xterm"
-    let &t_SI .= "\e[?2004h"
-    let &t_EI .= "\e[?2004l"
-    let &pastetoggle = "\e[201~"
-
-  function XTermPasteBegin(ret)
-    set paste
-    return a:ret
-  endfunction
-
-  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
-endif
 "折りたたみ機能"
 au FileType vim setlocal foldmethod=marker
 set scrolloff=3
@@ -73,8 +60,23 @@ Plug 'plasticboy/vim-markdown'
 Plug 'previm/previm'
 Plug 'tfnico/vim-gradle'
 Plug 'tyru/open-browser.vim'
+Plug 'twitvim/twitvim'
+Plug 'mattn/webapi-vim'
 call plug#end()
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 au BufRead,BufNewFile *.md set filetype=markdown
+""let g:user_emmet_leader_key='<C-s>'
+"" let g:user_emmet_settings=webapi#json#decode(join(readfile(expand('~/dotfiles/base.json')),'\n'))
 autocmd VimEnter * execute 'NERDTree'
 
+let twitvim_browser_cmd = 'open' " for Mac
+let twitvim_force_ssl = 1 
+let twitvim_count = 40
+
+function! s:findtweet(timer)
+   FriendsTwitter 
+endfunction
+
+
+command! StartTweet call timer_start(100000 ,function("s:findtweet") ,{ "repeat" : -1 })
+command! StopTweet call timer_stop(function("s:findtweet")
