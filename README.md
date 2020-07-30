@@ -2,8 +2,8 @@
 
 ## 使い方
 ```
-chomod 764 dotfileLink.sh
-./dotfileLink.sh
+chmod 764 dotfilesLink.sh
+./dotfilesLink.sh
 ```
 
 これで~/に諸々のプロファイルのリンクが貼られるよ。
