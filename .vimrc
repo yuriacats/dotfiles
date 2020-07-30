@@ -1,8 +1,8 @@
+"対応Vim　VimPythonコンパイルバージョン "
 "XMLするフレームワーク系のシンタックスの拡張"
 au BufRead,BufNewFile *.vue set filetype=html
 " 行番号を表示"
-colorscheme molokai
-set number 
+set number
 set cursorline
 set expandtab
 set softtabstop =2
@@ -50,8 +50,8 @@ Plug 'othree/yajs.vim'            " es6のハイライト"
 Plug 'tomasr/molokai'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'                " jsxのハイライト"
-Plug 'mattn/emmet-vim'  
-Plug 'hail2u/vim-css3-syntax'     
+Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'udalov/kotlin-vim'
 Plug 'scrooloose/nerdtree'        "vimの:eコマンド押したときのツリー"
 Plug 'dpelle/vim-LanguageTool'
@@ -62,6 +62,19 @@ Plug 'tfnico/vim-gradle'
 Plug 'tyru/open-browser.vim'
 Plug 'twitvim/twitvim'
 Plug 'mattn/webapi-vim'
+Plug 'vim-scripts/SingleCompile'
+Plug 'neovim/pynvim'
+Plug 'sheerun/vim-polyglot'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+let g:deoplete#enable_at_startup = 1
 call plug#end()
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -70,13 +83,28 @@ au BufRead,BufNewFile *.md set filetype=markdown
 autocmd VimEnter * execute 'NERDTree'
 
 let twitvim_browser_cmd = 'open' " for Mac
-let twitvim_force_ssl = 1 
+let twitvim_force_ssl = 1
 let twitvim_count = 40
 
+function! _compilecss()
+  set cmdheight=3
+  let filepath =fnamemodify('', ':p')
+  exe ":!sass --watch ". filepath ."scss:" . filepath ."css"
+  set cmdheight=1
+endfunction
+command! Compilecss call _compilecss()
+
+
 function! s:findtweet(timer)
-   FriendsTwitter 
+   FriendsTwitter
 endfunction
 
 
 command! StartTweet call timer_start(100000 ,function("s:findtweet") ,{ "repeat" : -1 })
 command! StopTweet call timer_stop(function("s:findtweet")
+
+
+augroup auto_style
+  autocmd!
+  autocmd bufWritePost *.scss :Compilecss
+augroup END
