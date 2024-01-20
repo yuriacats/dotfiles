@@ -7,3 +7,23 @@ local options = {
 }
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
+
+-- how to install : https://github.com/wbthomason/packer.nvim
+require("packer").startup(function()
+  use 'wbthomason/packer.nvim'
+-- use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'obaland/vfiler.vim'
+  use 'obaland/vfiler-fzf'
+  use 'ibhagwan/fzf-lua'
+-- nvim-cmp
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/vim-vsnip"
+end)
