@@ -26,4 +26,11 @@ require("packer").startup(function()
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/vim-vsnip"
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'prabirshrestha/async.vim'
+  use 'prabirshrestha/vim-lsp'
+  use 'prabirshrestha/asyncomplete.vim'
+  use 'prabirshrestha/asyncomplete-lsp.vim'
+  use 'hashivim/vim-terraform' 
 end)
