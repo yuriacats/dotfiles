@@ -7,6 +7,10 @@ local options = {
 }
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
+vim.keymap.set('n','b', ':noh<CR>')
+vim.keymap.set('n', 'gh','gT')
+vim.keymap.set('n', 'gl','gt')
+vim.keymap.set('n','s', '<Nor>')
 
 -- how to install : https://github.com/wbthomason/packer.nvim
 require("packer").startup(function()
@@ -34,3 +38,4 @@ require("packer").startup(function()
   use 'prabirshrestha/asyncomplete-lsp.vim'
   use 'hashivim/vim-terraform' 
 end)
+
