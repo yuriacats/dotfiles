@@ -15,7 +15,6 @@ vim.keymap.set('n','s', '<Nor>')
 -- how to install : https://github.com/wbthomason/packer.nvim
 require("packer").startup(function()
   use 'wbthomason/packer.nvim'
--- use 'williamboman/nvim-lsp-installer'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'vim-airline/vim-airline'
@@ -23,7 +22,6 @@ require("packer").startup(function()
   use 'obaland/vfiler.vim'
   use 'obaland/vfiler-fzf'
   use 'ibhagwan/fzf-lua'
--- nvim-cmp
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-buffer"
@@ -37,5 +35,15 @@ require("packer").startup(function()
   use 'prabirshrestha/asyncomplete.vim'
   use 'prabirshrestha/asyncomplete-lsp.vim'
   use 'hashivim/vim-terraform' 
+  use {'CopilotC-Nvim/CopilotChat.nvim',
+    requires ={
+      { 'github/copilot.vim'},
+      { 'nvim-lua/plenary.nvim'}
+    },
+  }
 end)
+require("CopilotChat").setup {
+  debug = true, -- Enable debugging
+  -- See Configuration section for rest
+}
 
